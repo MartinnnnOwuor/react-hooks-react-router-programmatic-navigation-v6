@@ -1,22 +1,17 @@
-import { NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./NavBar.css";
 
-function NavBar() {
-
+function NavBar({ logout }) {
   return (
     <nav>
-      <NavLink
-        to="/"
-        className="nav-link" 
-      >
+      <NavLink to="/" className="nav-link">
         Home
       </NavLink>
-      <NavLink
-        to="/about"
-        className="nav-link"
-      >
+      <NavLink to="/about" className="nav-link">
         About
       </NavLink>
+      {/* Add the logout function to handle the onClick event */}
+      <button onClick={logout}>Logout</button>
     </nav>
   );
 }
